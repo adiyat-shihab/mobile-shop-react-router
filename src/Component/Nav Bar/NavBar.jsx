@@ -10,9 +10,11 @@ export const NavBar = () => {
               href="#"
               className="mr-4 block cursor-pointer py-1.5 font-sans text-sm font-normal leading-normal text-inherit antialiased"
             >
-              <span className={"font-bold text-2xl text-sky-300"}>
-                Material Tailwind
-              </span>
+              <Link to={"/"}>
+                <span className={"font-bold text-2xl text-sky-300"}>
+                  Material Tailwind
+                </span>
+              </Link>
             </a>
             <ul className="hidden items-center gap-6 lg:flex">
               <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
