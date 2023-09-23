@@ -17,15 +17,18 @@ export const NavBar = () => {
             <ul className="hidden items-center gap-6 lg:flex">
               <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
                 <Link to={"/"}>
-                  <span className="flex items-center font-semibold text-xl">
+                  <span className="flex items-center font-semibold text-xl hover:text-sky-700">
                     Home
                   </span>
                 </Link>
               </li>
               <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                <span className="flex items-center font-semibold text-xl">
-                  Login
-                </span>
+                <Link to={"/favorite"}>
+                  {" "}
+                  <span className="flex items-center font-semibold text-xl hover:text-sky-400">
+                    Favorite
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>

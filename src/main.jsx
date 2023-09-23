@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Phones } from "./Component/Phones/Phones.jsx";
-import { Favorite } from "./Component/Phones/Favorite.jsx";
+import { Favorite } from "./Component/Favorite/Favorite.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,10 +16,9 @@ const router = createBrowserRouter([
         element: <Phones />,
       },
       {
-        path: "/favorite/:id",
+        path: "/favorite",
+        loader: () => fetch("https://api.npoint.io/088134cc8d8d7a2433cc"),
         element: <Favorite />,
-        loader: ({ params }) =>
-          fetch(`https://api.npoint.io/088134cc8d8d7a2433cc/${params.id}`),
       },
     ],
   },
